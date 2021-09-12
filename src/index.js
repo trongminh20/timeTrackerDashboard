@@ -5,6 +5,7 @@ import Card from './Components/Card';
 import { data } from './data';
 import Profile from './Components/Profile';
 import Menu from './Components/Menu';
+import './SCSS/index.scss';
 
 export class App extends Component {
   constructor(props) {
@@ -36,7 +37,7 @@ export class App extends Component {
   }
 
   render() {
-    return <div>
+    return <div id="wrapper">
       <Profile imageUrl={"#"} name="Minh Phan" />
       {this.menu.map(
         item => <Menu nav={item}
