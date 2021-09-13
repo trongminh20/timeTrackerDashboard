@@ -6,9 +6,7 @@ class Menu extends React.Component {
     this.func = this.props.func;
   }
   render() { 
-    return <div>
-      <button onClick={this.func}>{this.nav}</button>
-    </div>;
+    return <button className="navbar__btn " onClick={this.func}>{this.nav}</button>;
   }
 }
  

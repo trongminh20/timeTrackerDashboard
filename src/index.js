@@ -38,21 +38,26 @@ export class App extends Component {
 
   render() {
     return <div id="wrapper">
-      <Profile imageUrl={"#"} name="Minh Phan" />
-      {this.menu.map(
-        item => <Menu nav={item}
-          func={
-            (item === "Daily") ?
-              this.getDaily :
-              (item === "Weekly") ?
-                this.getWeekly :
-                this.getMonthly} />)}
-
-      {
-        data.map(dt => {
-          return <Card title={dt.title} currentHours={dt.timeframes[this.state.frame].current} timeframe="schedule" prev={dt.timeframes[this.state.frame].previous} />
-        })
-      }
+      <div id="profile--container">
+        <Profile imageUrl={"./images/image-jeremy.png"} name="Jeremy Robson" />
+        <div className="navbar">
+          {this.menu.map(
+            item => <Menu nav={item}
+              func={
+                (item === "Daily") ?
+                  this.getDaily :
+                  (item === "Weekly") ?
+                    this.getWeekly :
+                    this.getMonthly} />)}
+        </div>
+      </div>
+      <div className="card--container">
+        {
+          data.map(dt => {
+            return <Card headerID={(dt.title.toLowerCase())}title={dt.title} currentHours={dt.timeframes[this.state.frame].current} timeframe="schedule" prev={dt.timeframes[this.state.frame].previous} />
+          })
+        }
+      </div>
     </div>
   }
 }

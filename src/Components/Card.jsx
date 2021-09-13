@@ -7,15 +7,15 @@ class Card extends React.Component {
   }
   render() {
     return <div className="card">
-      <div className="cardHeader">
+      <div className="card__header" id={this.props.headerID}>
       </div>
-      <div className="cardBody">
-        <div className="cardBodyTitle">
+      <div className="card__body">
+        <div className="card__body--title">
           <p className="title">{this.props.title}</p>
           <span>...</span>
         </div>
-        <div className="cardBodyCurrentHours"><h2>{this.props.currentHours + ' Hrs'}</h2></div>
-        <div className="cardBodyPrev">
+        <div className="current__hour"><h2>{this.props.currentHours + ' Hrs'}</h2></div>
+        <div className="prev__hour">
           <p>{this.props.timeframe}- {this.props.prev} hrs</p>
         </div>
       </div>
