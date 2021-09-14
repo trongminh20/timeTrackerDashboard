@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { data } from '../data';
+import {svg_icon} from './svg_icon';
 
 class Card extends React.Component {
   constructor(props) {
@@ -8,6 +9,14 @@ class Card extends React.Component {
   render() {
     return <div className="card">
       <div className="card__header" id={this.props.headerID}>
+        {
+          svg_icon.map(
+            ico => {
+             if(this.props.headerID == ico.headerId){
+               return <img src= {ico.imgUrl}></img>
+             }
+            })
+        }
       </div>
       <div className="card__body">
         <div className="card__body--title">
