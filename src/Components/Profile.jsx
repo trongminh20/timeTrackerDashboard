@@ -14,7 +14,7 @@ class Profile extends Component {
       <img className="profile__img" src={this.imageUrl} alt="" />
       <div>
         <p id="report">Report for</p>
-        <h1 id="profile__name">{this.name}</h1>
+        <h1 className="profile__name">{this.name}</h1>
       </div>
     </div>;
   }

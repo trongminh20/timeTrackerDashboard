@@ -51,7 +51,7 @@ export class App extends Component {
                     this.getMonthly} />)}
         </div>
       </div>
-      <div className="card--container">
+      <div className="card__container">
         {
           data.map(dt => {
             return <Card headerID={(dt.title.split(' ').join('').toLowerCase())}title={dt.title} currentHours={dt.timeframes[this.state.frame].current} timeframe= {(this.state.frame == "daily")? "Last Day " : (this.state.frame == "weekly")? "Last Week ":"Last Month "} prev={dt.timeframes[this.state.frame].previous} />

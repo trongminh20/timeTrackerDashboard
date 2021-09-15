@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
 
-$mobile--resolution: 375px;
+$mobile--resolution: 799px;
 $medium--resolution: 800px;
 $desktop--resolution: 1440px;
 
@@ -22,137 +22,110 @@ body {
   background-color: $body--background;
   color: #fff;
   font-family: "Rubik", sans-serif;
+  width: 80%;
+  margin: auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: lighter;
+}
+
+.navbar__btn {
+  background: none;
+  background-color: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  &:hover {
+    color: $card--hover--color;
+  }
+}
+// setup background color
+#work {
+  background-color: $work--header--color;
+}
+#play {
+  background-color: $play--header--color;
+}
+#study {
+  background-color: $study--header--color;
+}
+#social {
+  background-color: $social--header--color;
+}
+#exercise {
+  background-color: $exercise--header--color;
+}
+#selfcare {
+  background-color: $selfcare--header--color;
 }
 
 #wrapper {
+  
+  @media (max-width: $mobile--resolution) {
+    display: flex;
+    flex-direction: column;
+    row-gap: 100px;
+  }
+
+  @media (min-width: $medium--resolution) {
+    display:grid;
+    grid-template-columns: 20% 70%;
+    gap:1rem;
+    margin:auto;
+    margin-top:200px;
+  }
 }
 
-#profile--container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.profile__container {
   position: relative;
-  width: 100%;
-  height: auto;
 }
+
 .profile {
   background-color: $profile--color;
-  display: flex;
-  flex-direction: row;
-  column-gap: 2rem;
-  align-items: center;
-  padding-left: 20px;
   border-radius: 15px;
-  z-index: 2;
-  h1 {
-    font-weight: lighter;
-  }
-  &__img {
-    width: 4rem;
-    height: 4rem;
-    border-radius: 50%;
-    border: 2px solid #fff;
-  }
-  &__name {
-  }
-}
-#report {
-  color: $sub--content;
-}
-.navbar {
-  background-color: $card--background;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 2rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  position: absolute;
-  height: 100px;
-  width: 93%;
-  z-index: 0;
-  top: 80px;
+  @media (max-width: $mobile--resolution) {
+    flex-direction: row;
+    column-gap: 0.5rem;
+  }
 
   @media (min-width: $medium--resolution) {
     flex-direction: column;
   }
+  justify-content: center;
+  align-items: center;
 
-  @media (max-width: $mobile--resolution) {
-    flex-direction: row;
-    align-items: center;
+  &__img {
+    border: 2px solid #fff;
+    border-radius: 50%;
+    max-width: 5rem;
+    margin: auto;
   }
 
-  &__btn {
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 1rem;
-    &:hover {
-      color: $card--hover--color;
-    }
+  #report {
+    color: $sub--content;
   }
 }
-.card--container {
-  margin-top: 9rem;
-  display: flex;
-  flex-direction: column;
-  row-gap: 1.5rem;
-  
-  @media (min-width:$medium--resolution) and (min-width: $desktop--resolution ){
-    flex-direction: row;
-    column-gap:1.5rem;
+.card__container {
+  width:100%;
+  @media (min-width: $medium--resolution) {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    justify-content: center;
+    gap:10px;
   }
 }
 .card {
   background-color: $card--background;
-  width: 100%;
-  border-radius: 15px;
-  &__header {
-    height: 3rem;
-    z-index: 0;
+  &__header{
     overflow: hidden;
+    height: 3rem;
     display: flex;
     justify-content: flex-end;
-  }
-  &__body {
-    z-index: 2;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
-  }
-  #work {
-    background-color: $work--header--color;
-  }
-
-  #play {
-    background-color: $play--header--color;
-  }
-  #study {
-    background-color: $study--header--color;
-  }
-  #social {
-    background-color: $social--header--color;
-  }
-  #exercise {
-    background-color: $exercise--header--color;
-  }
-  #selfcare {
-    background-color: $selfcare--header--color;
-  }
-
-  &__body {
-    &--title {
-    }
-    .current__hour {
-    }
-    .prev__hour {
-      color: $sub--content;
-    }
-  }
-  
-  &:hover {
-    background-color: $card--hover--color;
   }
 }
