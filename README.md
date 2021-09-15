@@ -1,6 +1,6 @@
 # Frontend Mentor - Time tracking dashboard
 - Deployed on Netlify : 
-- https://614278855bc11328eff9dcf5--minh-time-tracker-dashboard.netlify.app/
+- https://minh-time-tracker-dashboard.netlify.app/
 ## Welcome! 👋
 
 ## The challenge

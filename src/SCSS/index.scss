@@ -98,29 +98,36 @@ h6 {
   }
 
   @media (min-width: $medium--resolution) {
-    display:grid;
-    grid-template-rows:50% 50%;
+    display: grid;
+    grid-template-rows: 50% 50%;
     max-width: 100%;
     width: 100%;
-    height: 20rem;;
+    height: 20rem;
   }
-  &__img, #report, &__name{
-    margin-left:1rem;
+  &__img,
+  #report,
+  &__name {
+    margin-left: 1rem;
   }
   &__img {
     border: 3px solid #fff;
     border-radius: 50%;
     
-    margin-top: 1rem;
-    @media (min-width:$medium--resolution){
+    @media (min-width: $medium--resolution) {
       width: 8rem;
+      margin-top: 1rem;
     }
-    @media (max-width:$mobile--resolution){
+    @media (max-width: $mobile--resolution) {
       max-width: 5rem;
     }
   }
   #report {
     color: $sub--content;
+  }
+  &__name {
+    @media (max-width: $mobile--resolution) {
+      font-size: 20px;
+    }
   }
 }
 .navbar {
@@ -136,9 +143,8 @@ h6 {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    margin-top: 10rem;
-
-    height: 5rem;
+    margin-top: 7rem;
+    height: 7rem;
   }
   border-radius: 15px;
   background-color: $card--background;
@@ -191,9 +197,8 @@ h6 {
     .prev__hour {
       color: $sub--content;
     }
-    &:hover{
-      background-color:$card--hover--color;
+    &:hover {
+      background-color: $card--hover--color;
     }
   }
-  
 }
